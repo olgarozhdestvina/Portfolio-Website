@@ -1,0 +1,204 @@
+<!DOCTYPE HTML>
+<!--
+	Template from html5up.net | @ajlkn
+	Under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Olga Rozhdestvina Portfolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="shortcut icon" href="assets/images/assetfavicon.png" />
+	</head>
+	<body class="is-preload">
+		<!-- Header -->
+			<div id="header">
+
+				<div class="top">
+
+					<!-- Logo -->
+						<div id="logo">
+							<span class="image avatar48"><img src="assets/images/avatar.jpg" alt="" /></span>
+							<h1 id="title">Olga Rozhdestvina</h1>
+							<p>Data Analyst</p>
+						</div>
+
+					<!-- Nav -->
+						<nav id="nav">
+							<ul>
+								<li><a href="#top" id="top-link"><span class="icon solid fa-home">Intro</span></a></li>
+								<li><a href="#portfolio" id="portfolio-link"><span class="icon solid fa-th">Portfolio</span></a></li>
+								<li><a href="#about" id="about-link"><span class="icon solid fa-user">About Me</span></a></li>
+								<li><a href="#contact" id="contact-link"><span class="icon solid fa-envelope">Contact</span></a></li>
+							</ul>
+						</nav>
+
+				</div>
+
+				<div class="bottom">
+
+					<!-- Social Icons -->
+						<ul class="icons">
+							<li><a href="https://www.facebook.com/olya.rozhdestvina/" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+							<li><a href="https://github.com/olgarozhdestvina" class="icon brands fa-github"><span class="label">Github</span></a></li>
+							<li><a href="https://www.linkedin.com/in/olgarozhdestvina/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							<li><a href="olgarozhdestvina@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+						</ul>
+
+				</div>
+
+			</div>
+
+		<!-- Main -->
+			<div id="main">
+
+				<!-- Intro -->
+					<section id="top" class="one dark cover">
+						<div class="container">
+							<!-- Thank you message  -->
+							{% with messages = get_flashed_messages() %}
+								{% if messages %}
+									{% for category, message in get_flashed_messages(with_categories=True) %}
+										<div class="alert alert-{{category}}"> {{ message }}</div>
+									{% endfor %}
+								{% endif %}
+							{% endwith %}
+							<header>
+								<h2 class="alt">Hi! I'm <strong>Olga</strong>, <br />a Data Analytics student at Galway-Mayo Institute of Technology (GMIT).</h2>
+								<p>On my website you can find some examples of my projects with Github links. <br /> Have fun in browsing through the content and thank you for visiting!</p>
+							</header>
+
+							<footer>
+								<a href="#portfolio" class="button scrolly">Take me to the portfolio</a>
+							</footer>
+
+						</div>
+					</section>
+
+				<!-- Portfolio -->
+					<section id="portfolio" class="two">
+						<div class="container">
+
+							<header>
+								<h2>Portfolio</h2>
+							</header>
+
+							<div class="row">
+								<div class="col-4 col-12-mobile">
+									<article class="item">
+										<a href="https://github.com/olgarozhdestvina/Machine-Learning-and-Statistics-Project" class="image fit"><img src="assets/images/Wind Turbine Power Production1.jpg" alt="Wind Turbine Power Production" /></a>
+										<header>
+											<h3>Wind Turbine Power Production - Machine Learning</h3>
+										</header>
+									</article>
+									<article class="item">
+										<a href="https://github.com/olgarozhdestvina/Fundamentals-of-Data-Analysis-Project" class="image fit"><img src="assets/images/Wind Turbine Power Production2.jpg" alt="Wind Turbine Power Production" /></a>
+										<header>
+											<h3>Wind Turbine Power Production - Data Analytics Fundamentals</h3>
+										</header>
+									</article>
+								</div>
+								<div class="col-4 col-12-mobile">
+									<article class="item">
+										<a href="https://github.com/olgarozhdestvina/Multi-paradigm-Programming" class="image fit"><img src="assets/images/shop.jpg" alt="Shop simulator" /></a>
+										<header>
+											<h3>Shop Simulator</h3>
+										</header>
+									</article>
+									<article class="item">
+										<a href="https://github.com/olgarozhdestvina/Applied-Databases" class="image fit"><img src="assets/images/database.jpg" alt="database" /></a>
+										<header>
+											<h3>Applied Databases</h3>
+										</header>
+									</article>
+								</div>
+								<div class="col-4 col-12-mobile">
+									<article class="item">
+										<a href="https://github.com/olgarozhdestvina/Data-Representation-Project" class="image fit"><img src="assets/images/dental.jpg" alt="Dental Clinic" /></a>
+										<header>
+											<h3>Dental Clinic</h3>
+										</header>
+									</article>
+									<article class="item">
+										<a href="https://github.com/olgarozhdestvina/Air-Pollution-in-Dublin" class="image fit"><img src="assets/images/Air Pollution.jpg" alt="Air Pollution" /></a>
+										<header>
+											<h3>Air Pollution in Dublin</h3>
+										</header>
+									</article>
+								</div>
+							</div>
+
+						</div>
+					</section>
+
+				<!-- About Me -->
+					<section id="about" class="three">
+						<div class="container">
+
+							<header>
+								<h2>About Me</h2>
+							</header>
+
+							<a href="#" class="image featured"><img src="assets/images/about_me.jpg" alt="About Me" /></a>
+
+							<p>Currently, I am studying for a Higher Diploma in Science in Computing Data Analytics at Galway-Mayo Institute of Technology (GMIT), 
+								working toward my degree, and looking for ways to put my new knowledge and skills to use in a work environment. 
+								I am well-versed in a wide range of programming, scripting, and query languages. I am experienced in web, database and deployment technologies
+								as well as machine learning and statistics. I enjoy working hard to continuously expand my skill set.
+								To date, I have completed 9 out of 10 modules and will graduate in June 2021 with an expected First Honours result.
+							</p>
+
+						</div>
+					</section>
+
+				<!-- Contact -->
+					<section id="contact" class="four">
+						<div class="container">
+
+							<header>
+								<h2>Contact</h2>
+							</header>
+							<p>I would love to hear from you! Please drop me a message and let's see how I can help you.</p>
+
+							<form method="post" action="submit_form">
+								<div class="row">
+									<div class="col-6 col-12-mobile"><input type="text" name="name" placeholder="Name" /></div>
+									<div class="col-6 col-12-mobile"><input type="text" name="email" placeholder="Email" /></div>
+									<div class="col-12">
+										<textarea name="message" placeholder="Message"></textarea>
+									</div>
+									<div class="col-12">
+										<input type="submit" value="Send Message" />
+									</div>
+								</div>
+							</form>
+
+						</div>
+					</section>
+
+			</div>
+
+
+		<!-- Footer -->
+			<div id="footer">
+
+				<!-- Copyright -->
+					<ul class="copyright">
+						<li>&copy; Olga Rozhdestvina. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="assets/js/alert.js"></script>
+
+	</body>
+</html>
