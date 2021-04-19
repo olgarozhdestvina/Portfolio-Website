@@ -1,7 +1,7 @@
 ## Portfolio Website
 <img height="220" src="https://chrisjoyceportfolioblog.files.wordpress.com/2017/02/image.jpg">
 
-<br><br>
+<br>
 
 
 The repository contains a personal portfolio website. It is built using Flask, a microframework for Python, and a template from HTML5 UP.
