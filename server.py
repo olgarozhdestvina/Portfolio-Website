@@ -2,6 +2,7 @@ from flask import Flask, session, flash, redirect, request, render_template, url
 from werkzeug.exceptions import BadRequest, NotFound, MethodNotAllowed, InternalServerError
 import os
 from datetime import timedelta
+import csv
 
 app = Flask(__name__, template_folder=os.getcwd(), static_folder='assets')
 
@@ -18,16 +19,26 @@ def index():
     return render_template('index.html')
 
 
+def write_to_file(data):
+    with open('database.csv', 'a') as database:
+        name = data['name']
+        email = data['email']
+        message = data['message']
+        csv_writer = csv.writer(database, delimiter=',', lineterminator='\n', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+        csv_writer.writerow([name,email,message])
+        return name
+
+
 @app.route('/submit_form', methods=['POST', 'GET'])
 def submit_form():
     if request.method == 'POST':
         # set session
         session.permanenet = True
         data = request.form.to_dict()
-        
+        name = write_to_file(data)
         error = None
         if error is None:
-            flash(f'Thank you! I will get in touch with you shortly', 'success')
+            flash(f'Thank you, {name}! I will get in touch with you shortly.', 'success')
             return redirect(url_for('index'))
         else:
             flash(error, 'Something went wrong. Please try again!')

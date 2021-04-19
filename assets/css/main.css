@@ -2250,8 +2250,7 @@ input, select, textarea {
 
 			#main > section.one {
 				background-color: #81918E;
-				background-image: url("../images/banner.jpg"), opacity 0.2;
-				
+				background-image: url("../images/banner.jpg");	
 			}
 
 			#main > section.two {
